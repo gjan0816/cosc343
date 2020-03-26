@@ -6,9 +6,12 @@ from ev3dev2.sound import Sound
 from ev3dev2.wheel import EV3Tire
 from time import sleep
 
+""" 
+Robot class structure for achieving the tasks we have been given 
+"""
 class Robot:
 
-    # Initialise all the things we need to use in the program
+    # Initialise robot's sensor and their instances. 
     def __init__(self):
         # colour sensor instance
         self.cl = ColorSensor()
@@ -19,7 +22,7 @@ class Robot:
         self.mB = LargeMotor('outB')
         self.mC = LargeMotor('outC')
         self.drive = MoveTank(OUTPUT_B, OUTPUT_C)
-        self.mdiff = MoveDifferential(OUTPUT_B, OUTPUT_C, EV3Tire, 16 * 8) #16 is the
+        self.mdiff = MoveDifferential(OUTPUT_B, OUTPUT_C, EV3Tire, 16 * 8) # 8 is the distance between the 2 wheels
         # ultrasonic sensor instance
         self.us = UltrasonicSensor()
         self.us.mode = 'US-DIST-CM'
