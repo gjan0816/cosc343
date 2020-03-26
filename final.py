@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from ev3dev2.motor import *
-from ev3dev2.motor import *
-from ev3dev2.sensor.lego import *
+from ev3dev2.sensor.lego import ColorSensor, UltrasonicSensor
 from ev3dev2.sound import Sound
 from ev3dev2.wheel import EV3Tire
 from time import sleep
