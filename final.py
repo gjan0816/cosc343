@@ -100,7 +100,8 @@ class Robot:
 
     #moving across the black tiles
     def count_tiles(self, targer_colour):
-       
+        # from S tile to first
+        self.drive_for_rotation(20, 0.65)
         while self.count_black_tile < 13:
             # detects a black tile
             if self.cl.color == targer_colour:
@@ -152,9 +153,7 @@ class Robot:
 if __name__ == "__main__":
 
     r = Robot()
-    # from S tile to first
-    r.drive_for_rotation(20, 0.65)
-    # start to move from the first black tile to the 13th black tile
+    # start to move across the tiles
     r.count_tiles(1)
     # after 13th black tile and move towards the tower and push it off
     r.detect_tower_push_tower(200)
